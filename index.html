@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // // Task 1
+        // let num1 = parseInt(prompt("Enter first number: ", 3));
+        // let num2 = +prompt("Enter second number: ", 5);
+        // console.log(`${(num1 <= 1) ? "Number equal or little" : "Number not equal or more"} 1`);
+        // console.log(`${(num2 >= 3) ? "Number equal or more" : "Number not equal or little"} 3`);
+
+        // //Task 2
+        // let test = true;
+        // console.log(`${(test === true) ? '+++' : '---'}`);
+
+        // // Task 3
+        // let day = +prompt("Enter day: ", 5);
+        // if(day <= 0 || day > 31 || day === String(day)){
+        //     console.log("Invalid value. Try again");
+        // }else if(day > 0 && day <= 10){
+        //     console.log(`The number ${day} is included in the first decade of the month`);
+        // }else if(day > 0 && day <= 20){
+        //     console.log(`The number ${day} is included in the second decade of the month`);
+        // }else if(day > 0 && day <= 31){
+        //     console.log(`The number ${day} is included in the third decade of the month`);
+        // }
+
+        // Task 4
+        // (Для решения задания вам потребуется оператор остаток от деления %, например 10%3 === 1 , десять разделить на 3, остаток 1, второй пример 7 % 5, тут остаток от деления будет 2, ну и 3 пример это 14 % 10 === 4, остаток от деления на 10 будет равен 4)
+        // Необходимо от пользователя получить число.
+        // Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
+        // Пример:
+        // Пользователь ввел число 163. Программа должна вывести:
+        // "В числе 163 количество сотен: 1, десятков: 6, единиц: 3"
+        let number = +prompt("Enter number: ");
+
+        function getClassesOfNumber(num){
+            let hundreds = Math.trunc(num / 100 % 10);
+            let tens = Math.trunc(num % 100 / 10);
+            let ones = Math.trunc(num % 10);
+            console.log(`The number of ${num} includes hundreds: ${hundreds}, tens: ${tens}, units: ${ones}`);
+        }
+
+        getClassesOfNumber(number);
+    </script>
+</body>
+</html>
